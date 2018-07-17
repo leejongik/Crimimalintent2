@@ -24,7 +24,7 @@ public class Crime {
         return mId;
     }
 
-    public Date getData() {
+    public Date getDate() {
         return mDate;
 
     }
