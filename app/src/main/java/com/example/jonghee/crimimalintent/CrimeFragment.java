@@ -38,10 +38,18 @@ public class CrimeFragment extends Fragment {
     }
 
     @Override
-    public void onCreate(Bundle savedIdstaanceState){
-        super.onCreate(savedIdstaanceState);
+    public void onCreate(Bundle savedIdStaanceState){
+        super.onCreate(savedIdStaanceState);
         UUID crimeId = (UUID) getArguments().getSerializable(ARG_CRIME_ID);
         mCrime = CrimeLab.get(getActivity()).getCrime(crimeId);
+    }
+
+    @Override
+    public void onPause(){
+        super.onPause();
+
+        CrimeLab.get(getActivity())
+                .updateCrime(mCrime);
     }
 
     @Override
