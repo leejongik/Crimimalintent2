@@ -176,5 +176,3 @@ public class CrimeListFragment extends Fragment {
 
 
 
-
-
